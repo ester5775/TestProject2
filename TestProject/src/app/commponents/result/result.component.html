@@ -1,0 +1,20 @@
+<body class="black-background-color">
+<button mat-raised-button type="submit" class="button">finish</button>
+<mat-card class="center black-background-color white-text" dir='rtl'> 
+<br/>
+<a class="verdana-font"> הקואורדינטות של הכתובת  |   <span *ngIf="this.addressName" class="thicker-font"> {{this.addressName}}  </span> </a>
+<br/>
+<p class="white">קו רוחב</p>
+<br/>
+<p class="purple"  >{{this.coordination.horizentalLine}}</p>
+<br/>
+<p class="white">קו אורך</p>
+<br/>
+<p  class='purple' >{{this.coordination.verticalLine}}</p>
+<br/>
+<br/>
+<a class="verdana-font">החיפוש הפופולרי ביותר   |   <span  *ngIf="this.address[0]" class="thicker-font"> {{this.address[0].addressName}} </span> </a>
+<br/>
+<p class="white" > <span class="purple" *ngIf="this.address[0] != undefined">{{this.address[0].requestNum}}</span> בקשות</p>
+</mat-card>
+</body>

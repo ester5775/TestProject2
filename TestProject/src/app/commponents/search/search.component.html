@@ -1,0 +1,29 @@
+
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()"  class="center">
+ 
+    
+
+    <mat-form-field  class="center topMargin300" appearance="outline" >
+      <textarea matInput placeholder="כתובת" formControlName="address" ></textarea>
+      <mat-error *ngIf="addressForm.controls['address'].hasError('required')">
+         Address is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>  
+
+   
+   
+
+
+    <mat-divider _ngcontent-c1="" 
+    class="mat-divider center mat-divider-horizontal" 
+    role="separator" 
+    aria-orientation="horizontal">
+    </mat-divider>
+   
+    <mat-card-actions>
+     <!--it is not righ to write like it becose  its not global but i dont have time to chack how to enable the submet by the form. -->
+      <button mat-raised-button type="submit" [disabled]="addressForm.controls['address'].hasError('required')"  class="center topMargin50">הצג את הקואורדינטות</button>
+    </mat-card-actions>
+ 
+</form>
+
